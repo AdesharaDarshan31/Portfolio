@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darshan Adeshara | Portfolio</title>
+  <meta name="description" content="Portfolio of Darshanbhai Adeshara — Software Engineer & Data Professional. Projects in cloud architectures, full-stack systems, and predictive modeling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui"] },
+          colors: {
+            brand: {
+              DEFAULT: "#2563EB",
+              50:"#eff6ff", 100:"#dbeafe", 600:"#2563EB", 700:"#1d4ed8", 800:"#1e40af"
+            }
+          },
+          boxShadow:{ soft: "0 12px 30px rgba(0,0,0,.08)" }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-sky-100 via-blue-100 to-sky-200 text-slate-800">
+  
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-extrabold">
+        <span class="inline-block w-7 h-7 rounded-xl bg-brand"></span>
+        <span>Darshan Adeshara</span>
+      </a>
+      <button id="menuBtn" class="sm:hidden p-2 rounded-lg border border-neutral-200">☰</button>
+      <ul id="menu" class="hidden sm:flex items-center gap-6 text-sm">
+        <li><a href="#projects" class="hover:text-brand font-medium">Projects</a></li>
+        <li><a href="#experience" class="hover:text-brand font-medium">Experience</a></li>
+        <li><a href="#skills" class="hover:text-brand font-medium">Skills</a></li>
+        <li><a href="#hackathons" class="hover:text-brand font-medium">Hackathons</a></li>
+        <li><a href="#contact" class="hover:text-brand font-medium">Contact</a></li>
+        <li>
+          <a href="https://drive.google.com/file/d/1aIUYSAWN9vQueemvFK7Tbwe0nBYqDcTp/view?usp=drive_link" target="_blank" class="bg-brand text-white px-4 py-2 rounded-xl font-medium hover:bg-brand-700 transition">
+            Résumé
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Mobile Dropdown -->
+    <div id="mobileNav" class="sm:hidden hidden border-t border-neutral-200 bg-white">
+      <div class="max-w-6xl mx-auto px-4 py-3 space-y-2 text-sm flex flex-col">
+        <a href="#projects" class="py-1">Projects</a>
+        <a href="#experience" class="py-1">Experience</a>
+        <a href="#skills" class="py-1">Skills</a>
+        <a href="#hackathons" class="py-1">Hackathons</a>
+        <a href="#contact" class="py-1">Contact</a>
+        <a href="https://drive.google.com/file/d/1aIUYSAWN9vQueemvFK7Tbwe0nBYqDcTp/view?usp=drive_link" target="_blank" class="inline-block text-center bg-brand text-white px-3 py-2 rounded-xl font-medium mt-2">
+          Résumé
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-brand/10 to-transparent"></div>
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="text-brand font-semibold text-sm uppercase tracking-widest">Cloud Architecture • Full-Stack • Data Systems</div>
+        <h1 class="mt-2 text-4xl md:text-5xl font-extrabold leading-tight">Darshanbhai Adeshara</h1>
+        <p class="mt-4 text-lg text-neutral-700">
+          Master’s student in <b>Software Engineering & Digital Transformation</b> at <b>ESIGELEC (France)</b>. 
+          Specialized in designing scalable cloud backends, robust data engineering pipelines, and intuitive full-stack systems using 
+          <b>Python, SQL, .NET, Angular</b>, and modern cloud technologies.
+        </p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="#projects" class="inline-flex items-center bg-brand text-white px-5 py-2.5 rounded-xl font-medium shadow-soft hover:bg-brand-700 transition">View Projects</a>
+          <a href="https://drive.google.com/file/d/1aIUYSAWN9vQueemvFK7Tbwe0nBYqDcTp/view?usp=drive_link" target="_blank" class="inline-flex items-center border border-neutral-300 bg-white px-5 py-2.5 rounded-xl font-medium hover:bg-neutral-50 transition">
+            Download Résumé
+          </a>
+        </div>
+        <div class="mt-6 text-sm text-neutral-600 space-y-1">
+          <div>📍 Rouen, France</div>
+          <div>✉️ <a class="underline" href="mailto:darshanadeshara3112@gmail.com">darshanadeshara3112@gmail.com</a></div>
+          <div>🔗 <a class="underline" href="https://www.linkedin.com/in/darshan-adeshara-80162622b/">LinkedIn</a></div>
+          <div>📞 +33 7 59 65 7337</div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center">
+        <img src="darshan.png" alt="Darshan Adeshara" class="h-96 w-auto object-contain rounded-2xl shadow-md bg-white/20 backdrop-blur-sm" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white/90 backdrop-blur-sm border border-neutral-200 rounded-3xl p-8 shadow-soft">
+      <h2 class="text-2xl font-bold mb-3">About Me</h2>
+      <p class="text-neutral-700 leading-relaxed">
+        I bridge the gap between complex data processing and clean enterprise full-stack architectures. Currently completing advanced training at ESIGELEC, my background balances engineering scalable software products with deep automated analytical processing. From implementing cloud validation layers to deploying hardware-optimized computer vision pipelines and deep neural models, I build with a strict focus on code quality, performance optimization, and robust systems architecture.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20 bg-gradient-to-b from-sky-50 to-blue-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <div class="text-brand font-semibold text-xs uppercase tracking-widest">Engineering Portfolio</div>
+          <h2 class="text-3xl font-extrabold mt-1">Featured Technical Projects</h2>
+        </div>
+        <div class="flex flex-wrap gap-3 items-center">
+          <input id="search" placeholder="Search tech stack or names..." class="px-4 py-2 rounded-xl border border-neutral-300 bg-white focus:ring-2 focus:ring-brand focus:outline-none text-sm w-full sm:w-64 shadow-sm" />
+          <div id="filters" class="flex flex-wrap gap-2 text-sm">
+            <button data-filter="All" class="px-3 py-1.5 rounded-xl border border-neutral-300 bg-brand text-white border-brand font-medium">All</button>
+            <button data-filter="SaaS" class="px-3 py-1.5 rounded-xl border border-neutral-300 bg-white font-medium hover:bg-neutral-50">SaaS/Full-Stack</button>
+            <button data-filter="Data" class="px-3 py-1.5 rounded-xl border border-neutral-300 bg-white font-medium hover:bg-neutral-50">Data/AI</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Project 1: Cloud-Based Validation SaaS -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="saas fullstack backend cloud phash sync data">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-brand bg-brand/10 px-2.5 py-1 rounded-full uppercase tracking-wider">Cloud & SaaS</span>
+              <span class="text-xs text-neutral-500 font-semibold">2026</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Cloud-Based Validation SaaS – Insurance Portal</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              An offline-first Full-Stack Cloud Dashcam Validation infrastructure designed for modern claims management. Integrates Perceptual Hashing (pHash) to analyze duplication structural hazards and establishes precise chronological timestamp synchronization pipelines to counter insurance fraud natively.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">pHash Engine</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Cloud Infrastructure</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Data Integrity</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+            <span class="text-xs text-neutral-400 italic">Enterprise Architecture</span>
+          </div>
+        </article>
+
+        <!-- Project 2: Car Rental Management System -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="saas fullstack backend dotnet swagger rest database sql">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Full-Stack API</span>
+              <span class="text-xs text-neutral-500 font-semibold">2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Car Rental Management System</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              A comprehensive system built on ASP.NET Core (.NET 8) utilizing a full REST API architecture layer mapped via Entity Framework Core and SQL Server. Contains optimized controller structures handling Cars, Bookings, Users, and Messages, bound to a fast asynchronous JavaScript `fetch()` web UI inside wwwroot. All endpoint boundaries validated rigorously via Swagger UI.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">ASP.NET Core (.NET 8)</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">EF Core / SQL Server</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Swagger Routing</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="https://github.com/AdesharaDarshan31/CarRentalAPI" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3: Gesture Cam -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="data ai cv hci edge systems python programming cnn image-processing">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Computer Vision</span>
+              <span class="text-xs text-neutral-500 font-semibold">2025</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Gesture Cam for CV | HCI | Edge AI | Systems Programming</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              An AI-driven systems application utilizing OpenCV and CNN modeling paradigms. Designed to process dense medical video inputs, successfully implementing adaptive framing parameters to automatically extract optimal fetal abdomen frames with high structural stability.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">OpenCV / NumPy</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">CNN Models</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">TensorFlow Analytics</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="https://github.com/AdesharaDarshan31/Gesture-Control-HCI-Engine" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4: Book Market -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="saas fullstack web backend frontend databases dotnet angular">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-brand bg-brand/10 px-2.5 py-1 rounded-full uppercase tracking-wider">Full-Stack</span>
+              <span class="text-xs text-neutral-500 font-semibold">2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Book Market Ecosystem</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              A responsive, modular e-commerce marketplace platform engineered utilizing an Angular frontend client paired alongside a structured .NET Web API backend context. Implements a decoupled component architecture supporting query searching, caching, and secure cart system states.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Angular Core</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">.NET Web API</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Data Persistence</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 5: SMS Classifier -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="data ai ml nlp predictive python analytics chatbot sql">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Machine Learning</span>
+              <span class="text-xs text-neutral-500 font-semibold">2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">SMS Classifier Pipeline</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              An intelligent automation and analysis interface incorporating Natural Language Processing (NLP) tokenization models. Leverages adaptive contextual loops and an active SQL relational backend tracker to classify phishing threat variants dynamically.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Python / NLP</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">SQL Automation</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Adaptive Logic</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="https://github.com/AdesharaDarshan31/SMS-Phishing-Detector" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 6: IPL Dashboard -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="data powerbi dax analytics dashboard clean tableau">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-violet-600 bg-violet-50 px-2.5 py-1 rounded-full uppercase tracking-wider">Business Intelligence</span>
+              <span class="text-xs text-neutral-500 font-semibold">2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">IPL Performance Analytics Engine</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              Interactive analytic monitoring interfaces mapping multi-season telemetry profiles. Utilizes rigorous DAX schemas and programmatic cleaning scripts to model performance trends across distributed data sources.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Power BI / DAX</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Tableau Pipelines</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">ETL Validation</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="#" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 7: Tic-Tac-Toe -->
+        <article class="proj card flex flex-col justify-between p-6 bg-white border border-neutral-200 rounded-2xl shadow-sm hover:shadow-md transition" data-tags="saas javascript frontend algorithms code-quality logic python minimax">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-neutral-600 bg-neutral-100 px-2.5 py-1 rounded-full uppercase tracking-wider">Algorithmic</span>
+              <span class="text-xs text-neutral-500 font-semibold">2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800">Deterministic Tic-Tac-Toe</h3>
+            <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+              A programmatic game system evaluating game tree lookaheads via structural Minimax algorithms. Accomplishes completely deterministic real-time calculation constraints within an automated processing interface.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5 text-xs">
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Python Architecture</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Minimax Trees</span>
+              <span class="px-2 py-1 rounded-md bg-neutral-100 text-neutral-700 border">Matrix Traversal</span>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-neutral-100 flex justify-between items-center text-sm font-medium">
+            <a href="https://github.com/AdesharaDarshan31/Tic-Tac-Toe-Game" target="_blank" class="text-blue-600 hover:text-blue-800 underline inline-flex items-center gap-1">
+              GitHub Repo ↗
+            </a>
+          </div>
+        </article>
+
+      </div>
+      <div id="noResults" class="hidden mt-6 text-sm text-neutral-600 text-center py-8">No projects found matching the criteria. Clear filters or modify query.</div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <div class="text-brand font-semibold text-xs uppercase tracking-widest">Industry Track</div>
+      <h2 class="text-3xl font-extrabold mt-1">Professional Experience</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="p-6 bg-white/90 border border-neutral-200 rounded-2xl shadow-sm">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-800">Financial Analyst</h3>
+          <span class="text-xs font-semibold bg-neutral-100 px-2 py-1 rounded text-neutral-600">Late 2024</span>
+        </div>
+        <div class="text-sm text-brand font-medium mt-0.5">American Infosource — India</div>
+        <ul class="mt-4 space-y-2 text-sm text-neutral-700 list-disc list-inside">
+          <li>Automated financial operations reporting models through SQL parsing layers and Power BI structures.</li>
+          <li>Constructed macro calculation engines to maximize enterprise pipeline processing velocities.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 bg-white/90 border border-neutral-200 rounded-2xl shadow-sm">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-800">Data Science Intern</h3>
+          <span class="text-xs font-semibold bg-neutral-100 px-2 py-1 rounded text-neutral-600">Mid 2024</span>
+        </div>
+        <div class="text-sm text-brand font-medium mt-0.5">Prodigy Infotech — Remote</div>
+        <ul class="mt-4 space-y-2 text-sm text-neutral-700 list-disc list-inside">
+          <li>Designed algorithmic collection code and interactive analytical view patterns within Tableau.</li>
+          <li>Mapped statistical models to extract behavioral vectors and isolate data trends.</li>
+        </ul>
+      </div>
+
+      <div class="p-6 bg-white/90 border border-neutral-200 rounded-2xl shadow-sm md:col-span-2">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-slate-800">Workforce Management Analyst</h3>
+          <span class="text-xs font-semibold bg-neutral-100 px-2 py-1 rounded text-neutral-600">2023</span>
+        </div>
+        <div class="text-sm text-brand font-medium mt-0.5">Concentrix — India</div>
+        <ul class="mt-4 space-y-2 text-sm text-neutral-700 list-disc list-inside">
+          <li>Assembled automated SQL tracking frameworks mapping distributed production logistics.</li>
+          <li>Re-engineered workflow reporting routines: <b>Honored with Corporate "Rockstar Award"</b>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & CERTIFICATES (Professional Categorized Layout) -->
+  <section id="skills" class="py-20 bg-gradient-to-b from-sky-50 to-blue-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold mb-12 text-center text-slate-800">Skills & Framework Credentials</h2>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Tech Core Columns (Spans 2 columns on large screens) -->
+        <div class="lg:col-span-2 bg-white rounded-3xl shadow-soft p-8 grid sm:grid-cols-2 gap-6">
+          
+          <div>
+            <h3 class="font-bold text-sm uppercase tracking-wider text-slate-400 mb-3">Languages</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">C#</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">Python</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">SQL</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">TypeScript</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">JavaScript</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">C / C++</span>
+              <span class="px-2.5 py-1 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold">HTML5 / CSS3</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-sm uppercase tracking-wider text-slate-400 mb-3">Full-Stack & Cloud</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">ASP.NET Core</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">Angular</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">REST APIs</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">Entity Framework</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">Swagger</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">Node.js</span>
+              <span class="px-2.5 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded-lg text-xs font-semibold">Cloud Essentials</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-sm uppercase tracking-wider text-slate-400 mb-3">Data Science & AI</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">Power BI / DAX</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">Tableau Engine</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">OpenCV / CNNs</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">TensorFlow</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">Pandas / NumPy</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">Predictive Modeling</span>
+              <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-100 rounded-lg text-xs font-semibold">NLP Pipelines</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-sm uppercase tracking-wider text-slate-400 mb-3">Tools & Platforms</h3>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">Git / GitHub</span>
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">SQL Server / MySQL</span>
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">Docker</span>
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">Linux Environments</span>
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">Postman</span>
+              <span class="px-2.5 py-1 bg-purple-50 text-purple-700 border border-purple-100 rounded-lg text-xs font-semibold">Excel Macros</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certificates Card -->
+        <div class="bg-white rounded-3xl shadow-soft p-8">
+          <h3 class="font-bold text-sm uppercase tracking-wider text-slate-400 mb-4">Verified Framework Credentials</h3>
+          <ul class="space-y-4 text-sm text-slate-700">
+            <li class="flex flex-col">
+              <span class="font-semibold text-blue-600">Introduction to Cloud</span> 
+              <span class="text-xs text-neutral-400 mt-0.5">IBM SkillsBuild</span>
+            </li>
+            <li class="flex flex-col">
+              <span class="font-semibold text-blue-600">Data Science & Analytics</span> 
+              <span class="text-xs text-neutral-400 mt-0.5">HP LIFE Foundation</span>
+            </li>
+            <li class="flex flex-col">
+              <span class="font-semibold text-blue-600">SQL Advanced Bootcamp</span> 
+              <span class="text-xs text-neutral-400 mt-0.5">Let's Upgrade</span>
+            </li>
+            <li class="flex flex-col">
+              <span class="font-semibold text-blue-600">Data Analytics with Tableau</span> 
+              <span class="text-xs text-neutral-400 mt-0.5">Jobaaj</span>
+            </li>
+            <li class="flex flex-col">
+              <span class="font-semibold text-blue-600">Data Science Architecture</span> 
+              <span class="text-xs text-neutral-400 mt-0.5">Jagathi Networks</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HACKATHONS -->
+  <section id="hackathons" class="py-20 bg-white">
+    <h2 class="text-3xl font-extrabold text-center mb-10 text-slate-800">Hackathons & Innovations</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6">
+      
+      <!-- NLP Chatbot Hackathon Card -->
+      <div class="bg-slate-50 rounded-2xl p-6 border border-neutral-100 shadow-sm flex flex-col justify-between">
+        <div>
+          <h3 class="font-bold text-xl text-slate-800 mb-2">DAIICT Algorithmic Hackathon</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-4">
+            Engineered an optimized real-time decision component implementing strict Minimax state-tree lookaheads. Calculated optimal outcomes over deep multi-branch computational loops under structural time constraints seamlessly.
+          </p>
+        </div>
+        <div class="text-xs font-semibold text-brand tracking-wider uppercase">Algorithmic Engineering • 2024</div>
+      </div>
+
+      <!-- Xylem Hackathon Card -->
+      <div class="bg-slate-50 rounded-2xl p-6 border border-neutral-100 shadow-sm flex flex-col justify-between">
+        <div>
+          <h3 class="font-bold text-xl text-slate-800 mb-2">Xylem Global Ignite Hackathon</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-4">
+            Processed complex distributed environmental datasets using Python analytical libraries. Developed specialized structural telemetry visualization models utilizing Pandas and Matplotlib to extract water usage insights efficiently.
+          </p>
+        </div>
+        <div class="text-xs font-semibold text-emerald-600 tracking-wider uppercase">Data Pipeline Analysis • 2024</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-gradient-to-b from-sky-50 to-blue-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8">
+        <div class="text-brand font-semibold text-xs uppercase tracking-widest">Let’s talk</div>
+        <h2 class="text-3xl font-extrabold mt-1">Contact</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 border border-neutral-200 rounded-2xl">
+          <div class="text-lg font-semibold">Work with me</div>
+          <p class="mt-2 text-neutral-700">
+            I’m open to data/analytics internships and freelance dashboard projects.
+          </p>
+          <div class="mt-4 space-y-2 text-sm">
+            <div>✉️ <a class="underline" href="mailto:darshanadeshara3112@gmail.com">darshanadeshara3112@gmail.com</a></div>
+            <div>🔗 <a class="underline" href="https://www.linkedin.com/in/darshan-adeshara-80162622b/">LinkedIn</a></div>
+            <div>📍 Rouen, France</div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <form action="https://formspree.io/f/xzzjjkpb" method="POST" class="p-6 bg-white/80 rounded-2xl shadow">
+          <!-- Email subject -->
+          <input type="hidden" name="_subject" value="New message from Portfolio Website" />
+
+          <!-- Name Field -->
+          <label class="block text-sm font-medium mb-1 text-slate-700">Your Name</label>
+          <input 
+            type="text" 
+            name="name" 
+            required 
+            placeholder="Enter your name" 
+            class="w-full mb-4 px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+
+          <!-- Email Field -->
+          <label class="block text-sm font-medium mb-1 text-slate-700">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            required 
+            placeholder="Enter your email" 
+            class="w-full mb-4 px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+
+          <!-- Message Field -->
+          <label class="block text-sm font-medium mb-1 text-slate-700">Message</label>
+          <textarea 
+            name="message" 
+            rows="4" 
+            required 
+            placeholder="Write your message here..." 
+            class="w-full mb-4 px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+          ></textarea>
+
+          <!-- Spam Protection (hidden field) -->
+          <input type="text" name="_gotcha" class="hidden">
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-2 rounded-xl transition-all duration-300"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-neutral-200 bg-white/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-sm text-neutral-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>© <span id="year"></span> Darshanbhai Adeshara. All rights reserved.</div>
+      <div class="flex gap-6 font-medium">
+        <a href="#projects" class="hover:text-brand">Projects</a>
+        <a href="#skills" class="hover:text-brand">Skills</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Logic for Project Filters & Search -->
+  <script>
+    // mobile navigation toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (menuBtn) menuBtn.onclick = () => mobileNav.classList.toggle('hidden');
+
+    // copyright year auto update
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // structural filter mapping engine
+    const search = document.getElementById('search');
+    const cards = Array.from(document.querySelectorAll('.proj'));
+    const noResults = document.getElementById('noResults');
+    const filters = document.getElementById('filters');
+    let activeFilter = 'All';
+
+    function applyFilter() {
+      const query = (search?.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+      
+      cards.forEach(card => {
+        const textContent = card.innerText.toLowerCase() + ' ' + (card.dataset.tags || '').toLowerCase();
+        const matchesFilter = activeFilter === 'All' || textContent.includes(activeFilter.toLowerCase());
+        const matchesSearch = textContent.includes(query);
+        
+        const overallMatch = matchesFilter && matchesSearch;
+        card.style.display = overallMatch ? '' : 'none';
+        if (overallMatch) visibleCount++;
+      });
+      
+      noResults.classList.toggle('hidden', visibleCount > 0);
+    }
+
+    if (search) search.addEventListener('input', applyFilter);
+    if (filters) {
+      filters.addEventListener('click', (e) => {
+        if (e.target.matches('button[data-filter]')) {
+          activeFilter = e.target.getAttribute('data-filter');
+          
+          // reset button selection styles
+          [...filters.children].forEach(btn => {
+            btn.classList.remove('bg-brand', 'text-white', 'border-brand');
+            btn.classList.add('bg-white', 'text-slate-800');
+          });
+          
+          // apply active style to clicked tab button
+          e.target.classList.remove('bg-white', 'text-slate-800');
+          e.target.classList.add('bg-brand', 'text-white', 'border-brand');
+          
+          applyFilter();
+        }
+      });
+    }
+  </script>
+</body>
+</html> 
